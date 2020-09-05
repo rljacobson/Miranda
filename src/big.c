@@ -377,10 +377,10 @@ word x;
   long double b=1.0L, r=digit0(x);
   x = rest(x);
   while(x)b=b*IBASE,r=r+b*digit(x),x=rest(x);
-/*printf("bigtoldbl returns %Le\n",s?-r:r); /* DEBUG
+//printf("bigtoldbl returns %Le\n",s?-r:r); // DEBUG
   if(s)return(-r);
   return(r);
-} /* not compatible with std=c90, lib fns eg sqrtl broken */
+} // not compatible with std=c90, lib fns eg sqrtl broken */
 
 word dbltobig(x)  /* entier */
 double x;
@@ -388,7 +388,7 @@ double x;
   word r=make(INT,0,0);
   word *p = &r;
   double y= floor(x);
-/*if(fabs(y-x+1.0)<1e-9)y += 1.0; /* trick due to Peter Bartke, see note */
+//if(fabs(y-x+1.0)<1e-9)y += 1.0; /* trick due to Peter Bartke, see note */
   for(y=fabs(y);;)
      { double n = fmod(y,(double)IBASE);
        digit(*p) = (word)n;

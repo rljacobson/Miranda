@@ -342,10 +342,10 @@ char *mstack[4]; /* and where found */
 word mvp=0;
 
 checkversion(m)
-/* returns 1 iff m is directory with .version containing our version number */
+/* returns 1 iff m is directory with version containing our version number */
 char *m;
 { word v1,read=0,r=0;
-  FILE *f=fopen(strcat(strcpy(linebuf,m),"/.version"),"r");
+  FILE *f=fopen(strcat(strcpy(linebuf,m),"/version"),"r");
   if(f&&fscanf(f,"%u",&v1)==1)r= v1==version, read=1;
   if(f)fclose(f);
   if(read&&!r)mstack[mvp]=m,vstack[mvp++]=v1;

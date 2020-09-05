@@ -4,7 +4,7 @@ then cat contents
 else echo printman: no contents; exit
 fi
 if test -f ../.version
-then read VERSION < ../.version
+then read VERSION < ../version
 else VERSION=??
 fi
 echo "printout of online manual pages for version $VERSION"

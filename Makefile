@@ -26,7 +26,7 @@ y.tab.c y.tab.h: rules.y
 	$(YACC) -d rules.y
 big.o cmbns.o data.o lex.o reduce.o steer.o trans.o types.o y.tab.o: \
                      data.h combs.h utf8.h y.tab.h Makefile
-data.o: .xversion
+data.o: xversion.h
 big.o data.o lex.o reduce.o steer.o trans.o types.o: big.h
 big.o data.o lex.o reduce.o steer.o rules.y types.o: lex.h
 utf8.o: utf8.h Makefile
