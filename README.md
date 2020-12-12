@@ -9,8 +9,8 @@ codebase is mostly of historical interest. More sophisticated open source altern
 it. I am not aware of anyone using Miranda today. A couple of old classic texts by Simon Peyton
 Jones use Miranda. It would be interesting to see those texts get another chance at life.
 
-This repository contains the original source code with a reorganized file structure and minimal
-changes to make it build with CMake.
+This repository contains the "***NEW 64bit compatible:*** Miranda™ source release version 2.066 of 
+31 January 2020" with a reorganized file structure and minimal changes to make it build with CMake.
    
 The changes to the build system have made the following obsolete or broken: 
     
